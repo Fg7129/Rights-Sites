@@ -1,4 +1,4 @@
-document.getElementById("page").addEventListener("click",alert("Are you sure about that?"))
+document.getElementById("page").addEventListener("click",alert("HI"))
 
 //const events = {
     //'2024-12-01': 'HUMAN RIGHTS WORK SHOP',

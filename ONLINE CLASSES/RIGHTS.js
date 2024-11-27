@@ -1,13 +1,35 @@
 document.getElementById("page").addEventListener("click",alert("HI"))
 
-//const events = {
-    //'2024-12-01': 'HUMAN RIGHTS WORK SHOP',
-    //'2025-1-01': 'COMMUNITY RECYCLING DAY',
-
-//};
-
-//document.querySelectorAll('.Calendar-date').forEach(date => {
-    //date.addEventListener('click', () => {
-        //alert(events[date.dataset.date] || 'No events on this day.');
-    //});
-//});
+let score = 0;
+        let questionIndex = 0;
+        
+        function checkAnswer(answer) {
+            if (answer === 'correct') {
+                score++;
+            }
+            questionIndex++;
+            if (questionIndex === 2) {
+                showResult();
+            } else {
+                showNextQuestion();
+            }
+        }
+    
+        function showNextQuestion() {
+            const questions = document.querySelectorAll('.question-container');
+            questions[questionIndex - 1].style.display = 'none';
+            questions[questionIndex].style.display = 'block';
+        }
+    
+        function showResult() {
+            document.getElementById('quizResult').style.display = 'block';
+            document.getElementById('score').textContent = `You answered ${score} out of 2 questions correctly.`;
+        }
+    
+        function restartQuiz() {
+            score = 0;
+            questionIndex = 0;
+            const questions = document.querySelectorAll('.question-container');
+            questions.forEach(question => question.style.display = 'block');
+            document.getElementById('quizResult').style.display = 'none';
+        }

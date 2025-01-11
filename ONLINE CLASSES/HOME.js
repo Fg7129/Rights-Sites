@@ -1,5 +1,5 @@
 function changeBackgroundColor() {
-    const colors = ["blue", "#32CD32", "#1E90FF", "#FFD700", "#D2691E"];
+    const colors = ["blue", "yellow", "white", "chocolate", "orange"];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     document.body.style.backgroundColor = randomColor;
 }
@@ -19,5 +19,4 @@ function getGreeting() {
     document.getElementById('greeting').textContent = greeting;
 }
 
-// Call the function on page load
 window.onload = getGreeting;

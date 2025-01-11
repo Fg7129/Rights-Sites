@@ -1,10 +1,14 @@
-
+body {
+    background-color: red;
+}
 
 .info{
     text-align: right ;
 }
 
-
+#bg-color {
+    background-color: chartreuse;
+}
 
 #Head{
     text-align: center;
